@@ -1,27 +1,45 @@
-# Document Analysis Agent
+# AI Agents Portfolio
 
-An AI-powered document analysis tool leveraging the Claude API to process, analyze, and extract insights from various document types.
+A collection of specialized AI agents built to demonstrate practical 
+applications of large language models for business process optimization. 
+Each agent serves a specific business function and leverages Claude API 
+for advanced natural language understanding and generation.
 
-![Document Analysis Demo](./examples/document_analysis_demo.png)
+## Overview
 
-## Features
+This portfolio showcases my expertise in:
+- Building practical AI applications for business use cases
+- Leveraging large language models (specifically Claude) for task 
+automation
+- Developing both command-line and web-based interfaces for AI tools
+- Implementing proper software architecture and best practices
 
-- **Document Loading**: Process PDF, DOCX, and TXT files
-- **Intelligent Summarization**: Generate concise summaries of any document
-- **Information Extraction**: Extract specific entities like dates, names, and monetary values
-- **Question Answering**: Ask specific questions about document content
-- **Document Comparison**: Compare two documents and identify similarities and differences
+## Agents
 
-## Technical Architecture
+### Document Analysis Agent
+Process, analyze, and extract insights from business documents with 
+intelligent summarization, information extraction, and question answering 
+capabilities.
 
-This agent uses a modular architecture:
-- Core document processing engine in `app/main.py`
-- Streamlit web interface in `interface/web_app.py`
-- Claude API for advanced language understanding and generation
+[View Project](./DocumentAnalysisAgent)
 
-## Installation
+### Data Analysis Agent
+Analyze datasets, generate statistical insights, and create visualizations 
+with AI-powered interpretation and recommendations.
 
-1. Clone this repository:
-```bash
-git clone https://github.com/YourUsername/DocumentAnalysisAgent.git
-cd DocumentAnalysisAgent
+[View Project](./DataAnalysisAgent)
+
+## Technologies Used
+
+- Python 3.8+
+- Anthropic Claude API
+- Streamlit (for web interfaces)
+- Pandas, Matplotlib, Seaborn (for data analysis)
+- PyPDF, NLTK (for document processing)
+
+## Contact
+
+Feel free to reach out with any questions or collaboration opportunities:
+
+- Email: [your-email@example.com]
+- LinkedIn: [Your LinkedIn Profile]
