@@ -4,9 +4,9 @@ import tempfile
 import sys
 
 # Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from app.main import load_document, summarize_document, 
-extract_information, analyze_document
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app'))
+
+from core import load_document, summarize_document, extract_information, analyze_document
 
 st.set_page_config(page_title="Document Analysis Agent", layout="wide")
 st.title("Document Analysis Agent")
@@ -26,8 +26,7 @@ if uploaded_file:
     document_text = load_document(file_path)
     if document_text:
         # Create tabs for different functions
-        tab1, tab2, tab3 = st.tabs(["Summarize", "Extract Information", 
-"Ask Question"])
+        tab1, tab2, tab3 = st.tabs(["Summarize", "Extract Information", "Ask Question"])
         
         with tab1:
             st.header("Document Summary")
@@ -38,24 +37,19 @@ if uploaded_file:
         
         with tab2:
             st.header("Extract Information")
-            info_type = st.text_input("What type of information would you 
-like to extract?", 
-                                       placeholder="E.g., dates, names, 
-amounts, companies")
+            info_type = st.text_input("What type of information would you like to extract?", 
+                                       placeholder="E.g., dates, names, amounts, companies")
             if st.button("Extract") and info_type:
                 with st.spinner(f"Extracting {info_type}..."):
-                    extracted_info = extract_information(document_text, 
-info_type)
+                    extracted_info = extract_information(document_text, info_type)
                     st.write(extracted_info)
         
         with tab3:
             st.header("Ask a Question")
-            question = st.text_input("What would you like to know about 
-this document?")
+            question = st.text_input("What would you like to know about this document?")
             if st.button("Get Answer") and question:
                 with st.spinner("Analyzing document..."):
                     answer = analyze_document(document_text, question)
                     st.write(answer)
     else:
-        st.error("Failed to load document. Please check if it's a valid 
-PDF.")
+        st.error("Failed to load document. Please check if it's a valid PDF.")

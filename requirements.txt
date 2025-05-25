@@ -1,1 +1,7 @@
-requirements.txt
+streamlit
+anthropic
+pypdf
+nltk
+pandas
+matplotlib
+seaborn

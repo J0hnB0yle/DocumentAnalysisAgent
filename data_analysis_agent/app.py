@@ -1,5 +1,3 @@
-interface/web_app.py
-
 import streamlit as st
 import pandas as pd
 import os
@@ -9,9 +7,7 @@ import base64
 from PIL import Image
 import io
 
-# Add parent directory to path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from app.main import load_data, analyze_data, create_visualization, recommend_visualizations, explain_analysis
+from core import load_data, analyze_data, create_visualization, recommend_visualizations, explain_analysis
 
 st.set_page_config(page_title="Data Analysis Agent", layout="wide")
 
