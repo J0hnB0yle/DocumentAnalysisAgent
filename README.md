@@ -37,9 +37,3 @@ with AI-powered interpretation and recommendations.
 - Pandas, Matplotlib, Seaborn (for data analysis)
 - PyPDF, NLTK (for document processing)
 
-## Contact
-
-Feel free to reach out with any questions or collaboration opportunities:
-
-- Email: [your-email@example.com]
-- LinkedIn: [Your LinkedIn Profile]
